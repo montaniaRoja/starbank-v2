@@ -1,0 +1,53 @@
+En sistemas Unix (como Linux y macOS), puedes usar el siguiente comando para encontrar el PID del proceso que está usando el puerto 3000:
+
+lsof -i :3000
+
+
+Luego, termina el proceso utilizando su PID (por ejemplo, si el PID es 12345):
+
+kill -9 12345
+
+
+Ejecutar la Aplicación en el Entorno test
+Para asegurarte de que estás ejecutando tu aplicación en el entorno test, establece la variable de entorno NODE_ENV antes de ejecutar tu aplicación:
+
+NODE_ENV=test npm start
+
+NODE_ENV=development npm start
+
+instalar Node.js y npm utilizando el método alternativo de instalación de NodeSource, que incluye tanto Node.js como npm en un solo paquete. Aquí tienes los pasos para hacerlo:
+
+1. Remover cualquier instalación anterior de Node.js y npm:
+
+sudo apt-get remove nodejs npm
+
+2. Limpiar el cache de apt:
+
+sudo apt-get clean
+sudo apt-get autoclean
+sudo apt-get update
+
+3. Agregar el repositorio de NodeSource y instalar Node.js:
+
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+Esto instalará tanto Node.js como npm desde el repositorio de NodeSource, asegurando que todas las dependencias se resuelvan correctamente.
+
+4. Verificar la instalación de Node.js y npm:
+
+node -v
+npm -v
+
+
+Navegar a la carpeta de tu aplicación:
+
+cd /ruta/a/tu/aplicacion
+
+Instalar las dependencias:
+
+npm install
+
+
+
+
